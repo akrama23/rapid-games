@@ -1,0 +1,16 @@
+const initState = {
+    popular = [],
+    new = [],
+    upcoming = []
+}
+
+
+const gameReducer = (state=initState,action) => {
+    switch(action.type){
+        case "FETCH_GAMES":
+            return {...state}
+        dafault:
+            return {...state}
+    }
+
+}
