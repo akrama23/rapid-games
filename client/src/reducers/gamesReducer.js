@@ -1,6 +1,6 @@
 const initState = {
     popular = [],
-    new = [],
+    newGames = [],
     upcoming = []
 }
 
