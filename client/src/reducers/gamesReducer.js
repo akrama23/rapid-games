@@ -5,7 +5,7 @@ const initState = {
 }
 
 
-const gameReducer = (state=initState,action) => {
+const gamesReducer = (state=initState,action) => {
     switch(action.type){
         case "FETCH_GAMES":
             return {...state}
@@ -14,3 +14,4 @@ const gameReducer = (state=initState,action) => {
     }
 
 }
+export default gamesReducer;
