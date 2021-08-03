@@ -1,4 +1,4 @@
-import axios from 'axios'
+
 
 const initState = {
     popular: [],
@@ -18,10 +18,6 @@ const gamesReducer = (state = initState, action) => {
 
 }
 
-//ACTION
-{
-    toype:
-}
 
 
 export default gamesReducer;
