@@ -1,12 +1,14 @@
+import axios from 'axios'
+
 const initState = {
-    popular : [],
-    newGames : [],
-    upcoming : [],
+    popular: [],
+    newGames: [],
+    upcoming: [],
     searched: []
 }
 
 
-const gamesReducer = (state=initState,action) => {
+const gamesReducer = (state = initState, action) => {
     switch (action.type) {
         case "FETCH_GAMES":
             return {...state};
@@ -15,4 +17,11 @@ const gamesReducer = (state=initState,action) => {
     }
 
 }
+
+//ACTION
+{
+    toype:
+}
+
+
 export default gamesReducer;
