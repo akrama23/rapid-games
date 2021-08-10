@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import GameDetail from '../components/GameDetail'
 
 //redex
 import { useDispatch, useSelector } from 'react-redux';
@@ -25,6 +26,7 @@ useEffect(() => {
     
     return(
         <GameList>
+            <GameDetail/>
             <h2>Upcoming Games</h2>
             <Games>
                 {upcoming.map(game => (
