@@ -10,7 +10,7 @@ const GameDetail = () => {
     const {screen, game} = useSelector((state) => state.detail);
     return(
         <CardShadow>
-            <div className="detail">
+            <Detail>
                 <div className="stats">
                     <div className="rating">
                         <h3>{game.name}</h3>
@@ -34,7 +34,7 @@ const GameDetail = () => {
                         <img src={screen.image} key={screen.id} alt="game"/>
                     ))}
                 </div>
-            </div>
+            </Detail>
         </CardShadow>
     );
 };
@@ -47,7 +47,29 @@ const CardShadow = styled(motion.div)`
     position: fixed;
     top: 0;
     left: 0;
+    &::-webkitscrollbar {
+        width: 0.5rem;
+    }
+    &::-webkitscrollbar-thumb {
+        background-color: #ff7676;
+    }
+    &::-webkitscrollbar-track {
+        background: white;
+    }
 
+`;
+
+const Detail = styled(motion.div)`
+    width: 80%;
+    border-radius: 1rem;
+    padding: 2rem 20rem;
+    background: white;
+    position: absolute;
+    left: 10%;
+    color: black;
+    img{
+        width: 100%;
+    }
 `;
 
 export default GameDetail;
