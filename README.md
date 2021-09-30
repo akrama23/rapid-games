@@ -4,7 +4,8 @@ Your next gaming browner
 
 gaming browser connected to rawg.io api
 
-#How to install 
+####How to install 
+
 -First, clone down to your local machine 
 
 -Second, cd into correct directory 
@@ -13,7 +14,8 @@ gaming browser connected to rawg.io api
 
 -forth, run 'npm start' to start the server and get things started 
 
-#Technologies 
+
+####Technologies 
 
 -React.js
 
