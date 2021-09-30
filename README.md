@@ -14,10 +14,17 @@ gaming browser connected to rawg.io api
 -forth, run 'npm start' to start the server and get things started 
 
 #Technologies 
+
 -React.js
+
 -Redux 
+
 -Thunk
+
 -Reaact Router 
+
 -external api (rawg.io)
+
 -Styled components 
+
 -Framer Motion
