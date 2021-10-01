@@ -4,38 +4,61 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 //redux 
 import { useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import { smallImage } from '../util';
 
-const GameDetail = () => {
+const GameDetail = ({pathId}) => {
+
+    const history = useHistory();
+    //exit detail
+    const exitDetailHandler = (e) => {
+        const element = e.target;
+        if(element.classList.contains("shadow")){
+            document.body.style.overflow = 'auto';
+            history.push('/')
+        }
+    }
     //data
-    const {screen, game} = useSelector((state) => state.detail);
+    const {screen, game, isLoading} = useSelector((state) => state.detail);
     return(
-        <CardShadow>
-            <Detail>
-                <div className="stats">
+        <>
+        {!isLoading && (
+        <CardShadow className="shadow" onClick={exitDetailHandler}>
+            <Detail layoutId={pathId}>
+                <Stats>
                     <div className="rating">
                         <h3>{game.name}</h3>
                         <p>Rating: {game.rating}</p>
                     </div>
-                    <div className="info">
+                    <Info>
                         <h3> Platform</h3>
-                        <div className="platforms">
-                           {game.platforms && game.platforms.map((data) => (
+                        <Platforms>
+                           { game.platforms?.map((data) => (
                                <h3 key={data.platform.id}>{data.platform.name}</h3>
                            ))}
-                        </div>
-                    </div>
-                </div>
-                <div className="media">
-                    <img src={game.background_image} alt="imagee"/>
-                </div>
-                <div className="description">{game.description_raw}</div>
+                        </Platforms>
+                    </Info>
+                </Stats>
+                <Media>
+                    <img 
+                    src={smallImage(game.background_image, 1280)} 
+                    alt={game.background_image}
+                    />
+                </Media>
+                <Description>{game.description_raw}</Description>
                 <div className="gallery">
-                    {screen.results && screen.results.map(screen => (
-                        <img src={screen.image} key={screen.id} alt="game"/>
+                    {screen.results.map((screen) => (
+                        <img 
+                        src={smallImage(screen.image, 1280)} 
+                        key={screen.id} 
+                        alt={screen.image}
+                        />
                     ))}
                 </div>
             </Detail>
         </CardShadow>
+        )}
+        </>
     );
 };
 
@@ -47,16 +70,17 @@ const CardShadow = styled(motion.div)`
     position: fixed;
     top: 0;
     left: 0;
-    &::-webkitscrollbar {
-        width: 0.5rem;
-    }
-    &::-webkitscrollbar-thumb {
-        background-color: #ff7676;
-    }
-    &::-webkitscrollbar-track {
-        background: white;
-    }
+    z-index: 5;
 
+    &::-webkit-scrollbar {
+        width: 0.5rem;
+    };
+    &::-webkit-scrollbar-thumb {
+        background-color: #ff7676;
+    };
+    &::-webkit-scrollbar-track {
+        background: white;
+    };
 `;
 
 const Detail = styled(motion.div)`
@@ -67,9 +91,52 @@ const Detail = styled(motion.div)`
     position: absolute;
     left: 10%;
     color: black;
+    z-index: 10;
     img{
         width: 100%;
     }
+`;
+
+const Stats = styled(motion.div)`
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        img{
+            width: 2rem;
+            height: 2rem;
+            display: inline;
+        }
+
+    `; 
+
+
+const Info = styled(motion.div)`
+        text-align: center;
+
+`; 
+
+const Platforms = styled(motion.div)`
+       display: flex;
+       justify-content: space-evenly;
+       img {
+           margin-left: 3rem;
+       } 
+
+`;
+
+
+const Media = styled(motion.div)`
+       margin-top: 5rem;
+       img{
+           width: 100%;
+           
+       }
+
+`;
+
+const Description = styled(motion.div)`
+        margin: 5rem 0rem;
+
 `;
 
 export default GameDetail;
