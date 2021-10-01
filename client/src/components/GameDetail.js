@@ -32,6 +32,12 @@ const GameDetail = ({pathId}) => {
         switch (platform){
             case "PlayStation 4":
                 return playstation;
+            case "PlayStation 5":
+                return playstation;
+            case "Xbox Series S/X":
+                return xbox;
+            case "Xbox S":
+                return xbox;    
             case "Xbox One":
                 return xbox;
             case "PC":
@@ -42,7 +48,6 @@ const GameDetail = ({pathId}) => {
                 return apple;
             default:
                 return gamepad;
-
         };
     };
 
@@ -61,12 +66,14 @@ const GameDetail = ({pathId}) => {
                     <Info>
                         <h3> Platform</h3>
                         <Platforms>
-                           { game.platforms?.map((data) => (
+                           { game.platforms.map((data) => (
                                <img 
                                key={data.platform.id} 
                                src={getPlatform(data.platform.name)}
                                alt={getPlatform(data.platform.name)}
-                               ></img>
+                               >
+
+                               </img>
                            ))}
                         </Platforms>
                     </Info>
