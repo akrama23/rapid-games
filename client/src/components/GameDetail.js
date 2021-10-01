@@ -7,6 +7,14 @@ import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { smallImage } from '../util';
 
+//images
+import playstation from '../img/playstation.svg';
+import steam from '../img/steam.svg';
+import xbox from '../img/xbox.svg';
+import nintendo from '../img/nintendo.svg';
+import apple from '../img/apple.svg';
+import gamepad from '../img/gamepad.svg'
+
 const GameDetail = ({pathId}) => {
 
     const history = useHistory();
@@ -17,7 +25,10 @@ const GameDetail = ({pathId}) => {
             document.body.style.overflow = 'auto';
             history.push('/')
         }
-    }
+    };
+
+    
+
     //data
     const {screen, game, isLoading} = useSelector((state) => state.detail);
     return(
