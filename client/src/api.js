@@ -41,11 +41,12 @@ export const newGamesURL = () => `${base_url}${newGames}`;
 
 //GAME DETAILS
 
-export const gameDetailsURL = (game_id) => `${base_url}games/${game_id}?${api_key}`
+export const gameDetailsURL = (game_id) => `${base_url}games/${game_id}?${api_key}`;
 
 //game screenshots 
-export const gameScreenshotURL = (game_id) => `${base_url}games/${game_id}/screenshots?${api_key}`
+export const gameScreenshotURL = (game_id) => `${base_url}games/${game_id}/screenshots?${api_key}`;
 
-
+//search
+export const searchGameURL = (game_name) => `${base_url}games?${api_key}&search=${game_name}&page_size=9`;
 
 // console.log(upcomingGamesURL());

@@ -23,7 +23,7 @@ gaming browser connected to rawg.io api
 
 -Thunk
 
--Reaact Router 
+-React Router 
 
 -external api (rawg.io)
 
