@@ -1,32 +1,32 @@
-# Rapid Games 
+# Rapid Games
 
 Your next gaming browner
 
 gaming browser connected to rawg.io api
 
-####How to install 
+####How to install
 
--First, clone down to your local machine 
+-First, clone down to your local machine
 
--Second, cd into correct directory 
+-Second, cd into rapid-games directory, then cd into the client directory
 
 -third, run 'npm install'
 
--forth, run 'npm start' to start the server and get things started 
+-forth, run 'npm start' to start the server and get things started
 
 
-####Technologies 
+####Technologies
 
 -React.js
 
--Redux 
+-Redux
 
 -Thunk
 
--React Router 
+-React Router
 
 -external api (rawg.io)
 
--Styled components 
+-Styled components
 
 -Framer Motion
