@@ -27,13 +27,28 @@ useEffect(() => {
 },[dispatch]);
 //Get data back from the state by using useSelector 
 //extract specific items from state.games
-    const { popular, newGames, upcoming } = useSelector((state) => state.games);
+    const { popular, newGames, upcoming, searched } = useSelector((state) => state.games);
     
     return(
         <GameList>
             <AnimateSharedLayout type="crossfade">
             <AnimatePresence>{pathId && <GameDetail pathId={pathId} />}</AnimatePresence>
-            
+            {searched.length ? (
+            <div className="searched"> 
+               <h2>Searched Games</h2>
+                <Games>
+                    {searched.map(game => (
+                        <Game 
+                        key={game.id} 
+                        id={game.id}
+                        name={game.name} 
+                        released={game.released}
+                        image={game.background_image}
+                        />
+                    ))}
+                </Games>  
+            </div>
+            ) : ("")}
                 <h2>Upcoming Games</h2>
                 <Games>
                     {upcoming.map(game => (

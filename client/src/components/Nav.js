@@ -22,9 +22,14 @@ const Nav = () => {
         dispatch(fetchSearch(textInput))
         setTextInput("");
     };
+
+    const clearSearched = () => {
+        dispatch({type: "CLEAR_SEARCHED"});
+    };
+
     return(
         <StyledNav>
-            <Logo>
+            <Logo onClick={clearSearched}>
                 <img src={logo} alt="logo"/>
                 <h1>Rapid Games</h1>
             </Logo>
