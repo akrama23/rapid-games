@@ -1,10 +1,10 @@
 # Rapid Games
 
-Your next gaming browner
+Your next gaming browser for upcoming, popular, and new video games.
 
-gaming browser connected to rawg.io api
+Gaming browser connected to rawg.io api
 
-####How to install
+# How to Install
 
 -First, clone down to your local machine
 
@@ -15,7 +15,7 @@ gaming browser connected to rawg.io api
 -forth, run 'npm start' to start the server and get things started
 
 
-####Technologies
+# Technologies 
 
 -React.js
 
@@ -25,7 +25,9 @@ gaming browser connected to rawg.io api
 
 -React Router
 
--external api (rawg.io)
+-Axios
+
+-External api (rawg.io)
 
 -Styled components
 
