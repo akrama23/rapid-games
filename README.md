@@ -1,5 +1,6 @@
 
-# ![Screen Shot 2021-10-12 at 2 33 00 PM](https://user-images.githubusercontent.com/71532145/137011601-03eac294-8541-47ec-9048-02d60a6f7b8e.png) 
+# <img width="924" alt="Screen Shot 2021-10-12 at 3 00 36 PM" src="https://user-images.githubusercontent.com/71532145/137013903-ed82c41b-b504-4a1f-8019-bf584fa133ab.png">
+
 
 
 Your next gaming browser for upcoming, popular, and new video games.
