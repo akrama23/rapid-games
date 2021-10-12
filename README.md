@@ -1,3 +1,5 @@
+
+
 # Rapid Games
 
 Your next gaming browser for upcoming, popular, and new video games.
