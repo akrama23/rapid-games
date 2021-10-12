@@ -1,6 +1,6 @@
 
+# ![Screen Shot 2021-10-12 at 2 33 00 PM](https://user-images.githubusercontent.com/71532145/137011601-03eac294-8541-47ec-9048-02d60a6f7b8e.png) 
 
-# Rapid Games
 
 Your next gaming browser for upcoming, popular, and new video games.
 
