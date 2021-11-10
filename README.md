@@ -5,20 +5,14 @@
 
 Your next gaming browser for upcoming, popular, and new video games.
 
-Gaming browser connected to rawg.io api
+Gaming browser connected to rawg.io api to ensure current games are being outputed.
 
-# How to Install
+# Check it out live on github pages- link below
 
--First, clone down to your local machine
-
--Second, cd into rapid-games directory, then cd into the client directory
-
--third, run 'npm install'
-
--forth, run 'npm start' to start the server and get things started
+-- https://akrama23.github.io/rapid-games/
 
 
-# Technologies 
+# Technologies Used
 
 -React.js
 
